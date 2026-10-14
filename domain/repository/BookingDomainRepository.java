@@ -1,0 +1,12 @@
+package com.example.booking.domain.repository;
+
+import com.example.booking.domain.model.Booking;
+import java.util.List;
+import java.util.Optional;
+
+public interface BookingDomainRepository {
+    Booking save(Booking booking);
+    Optional<Booking> findById(Long id);
+    List<Booking> findByUserId(Long userId);
+    void delete(Booking booking);
+}
